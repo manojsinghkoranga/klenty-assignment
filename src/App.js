@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import NavBar from './container';
+import Feeds from './components/Feeds';
+import Footer from './components/Footer';
+
 
 function App() {
+  const [searchValue, setSearchValue] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <NavBar searchValue={searchValue} setSearchValue={setSearchValue} />
+      <Container >
+        <Feeds  field={"international"} />
+        <Feeds  field={"national"} />
+        <Feeds  field={"science"} />
+        <Feeds  field={"sports"} />
+        <Feeds  field={"entertainment"} />
+      </Container>
+      <Footer />
+    </>
+  )
 }
+
+const Container = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 export default App;

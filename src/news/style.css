@@ -1,0 +1,26 @@
+.article{
+    margin-top: 20px;
+    width: 45%;
+    border-radius: 5px;
+    height: 550px;
+    background-color: rgb(243, 237, 229);
+    box-shadow: 5px 10px 8px #c6c4c4;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+header{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+img{
+    margin-top: 10px;
+    height: 300px;
+    width: 100%;
+}
+
+p{
+    margin: 5px;
+}
