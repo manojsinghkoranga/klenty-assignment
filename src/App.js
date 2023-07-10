@@ -12,7 +12,7 @@ function App() {
       <NavBar searchValue={searchValue} setSearchValue={setSearchValue} />
       <Container >
         <Feeds  field={"international"} />
-        <Feeds  field={"national"} />
+        <Feeds  field={"india"} />
         <Feeds  field={"science"} />
         <Feeds  field={"sports"} />
         <Feeds  field={"entertainment"} />

@@ -1,4 +1,4 @@
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./navbar.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";

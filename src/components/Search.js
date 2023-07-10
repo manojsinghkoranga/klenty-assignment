@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import FieldNews from "./FieldNews";
-import NavBar from "../container";
 import { useParams } from "react-router-dom";
 
 const Search = () => {
+    // using params to search for news
     const {field} = useParams();
-   
+
     return (
         <>
             <Container >

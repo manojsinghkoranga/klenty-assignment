@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import fetchedData from "../db.json";
 import News from "../news";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
@@ -9,12 +8,11 @@ const Feeds = (props) => {
 
     const [news, setNews] = useState([]);
     const [visibleData, setVisibleData] = useState([]);
-    const [searchValue, setSearchValue] = useState(props.field);
 
     // fetch data
     useEffect(() => {
       const fetchData = async() => {
-        const data = await fetch(`https://newsapi.org/v2/everything?q=${searchValue}&apiKey=054662e7ada64c1cbcc0c8544e7fc2f0`);
+        const data = await fetch(`https://newsapi.org/v2/everything?q=${props.field}&apiKey=054662e7ada64c1cbcc0c8544e7fc2f0`);
         const response = await data.json();
         // const response = fetchedData;
         setNews(response.articles);
@@ -24,7 +22,7 @@ const Feeds = (props) => {
       fetchData();
     }, [])
     
-    // handeling data on scroll till bottom
+    // handeling data on scroll till bottom (adding data if we reach to bottom of the page)
     useEffect(() => {
       const handleScroll = () => {
         const { scrollTop, clientHeight, scrollHeight } = document.documentElement;

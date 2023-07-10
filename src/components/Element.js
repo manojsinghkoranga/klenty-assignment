@@ -2,7 +2,6 @@ import styled from "styled-components";
 import FieldNews from "./FieldNews";
 
 const Element = (props) => {
-    
     return (
         <>
             <Container >
